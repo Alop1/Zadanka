@@ -12,6 +12,7 @@ def reverse_sentence(sentence):
 def convert_to_phone_keyboard_style(sentence):
     """Exercise 2"""
     letter_to_number_map = create_letters_number_mapping()
+    sentence= sentence.lower()
     phone_style_sentence = ""
     for char in sentence:
         selected_pair_number_letters = [(key, letter_to_number_map[key]) for key in letter_to_number_map.keys() if char in key]         # select desire pair number amd letter set eg. 'abc' => 2
@@ -37,16 +38,12 @@ def create_letters_number_mapping():
 
 def count_digits(origin_number):
     """Exercise 3"""
-    without_repetition_number = set(str(origin_number))
-    digits_number = len(without_repetition_number)
-    return digits_number
+    return len(set(str(origin_number)))
 
 
-"""4.	Palindrome. Write a program which tells if a word or a sentence is a palindrome.
-I.e. “A toyota”, “11 02 2011”, “Anna”. Ignore spaces or letter case.
-"""
+
 def isPalindrome(sentence):
-    """Execise 4"""
+    """Exercise 4"""
     sentence = sentence.replace(' ', '')
     clear_sentence = sentence.lower()
     for i in xrange(len(clear_sentence)/2):
@@ -59,26 +56,15 @@ def isPalindrome(sentence):
 
 
 
-
-
-
-
 def main():
     string1 = "she sells sea shells"
     string2 = "two tea to room two two"
     string3 = "three witches watch three Swatch watches. Which witch watch which Swatch watch?"
-
-    # print reverse_sentence(string1)
-    print string
-    convert_to_phone_keyboard_style(string2)
+    string4 = "Eve has a cat"
+    convert_to_phone_keyboard_style(string4)
     print count_digits(12345555)
     string4 = "Anna"
-    # print isPalindrome(string4)
-    # string5 = "A toyota"
-    # print isPalindrome(string5)
-    # string6 = "11 02 2011"
-    # print isPalindrome(string6)
-    print isPalindrome(string1)
+    print isPalindrome(string4)
 #
 
 #

@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="95335309-0c49-4f6a-8d1e-881a2dd7b3fa" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Ex1to4.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Roulette.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test_ex1to4.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ex1.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test_ex1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ex1to4.py" beforeDir="false" afterPath="$PROJECT_DIR$/Ex1to4.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test_ex1to4.py" beforeDir="false" afterPath="$PROJECT_DIR$/Test_ex1to4.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -26,11 +20,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="Ex1to4.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Ex1to4.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Ex1to4.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-473">
-              <caret line="27" column="32" lean-forward="true" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
+            <state relative-caret-position="560">
+              <caret line="40" column="39" lean-forward="true" selection-start-line="40" selection-start-column="39" selection-end-line="40" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -44,11 +38,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Test_ex1to4.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Test_ex1to4.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Test_ex1to4.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-255">
-              <caret line="17" column="36" lean-forward="true" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
+            <state relative-caret-position="-595">
+              <caret line="7" selection-start-line="7" selection-end-line="7" />
               <folding>
                 <element signature="e#24#39#0" expanded="true" />
               </folding>
@@ -74,16 +68,16 @@
         <option value="$PROJECT_DIR$/Ex1.py" />
         <option value="$PROJECT_DIR$/Roulette.py" />
         <option value="$PROJECT_DIR$/Test_ex1.py" />
-        <option value="$PROJECT_DIR$/Ex1to4.py" />
         <option value="$PROJECT_DIR$/Test_ex1to4.py" />
+        <option value="$PROJECT_DIR$/Ex1to4.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-12" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-1760" />
     <option name="y" value="-12" />
-    <option name="width" value="1943" />
-    <option name="height" value="1043" />
+    <option name="width" value="1295" />
+    <option name="height" value="695" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -119,7 +113,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.Ex1to4">
     <configuration name="Ex1to4" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Zadanka" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -138,7 +132,7 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="Unittests for Test_ex1to4" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittests for Test_ex1to4.TestEx1to4" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="Zadanka" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -148,7 +142,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;Test_ex1to4&quot;" />
+      <option name="_new_target" value="&quot;Test_ex1to4.TestEx1to4&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
     </configuration>
     <configuration name="Unittests for Test_ex1to4.TestEx1to4.test_count_digits" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
@@ -192,18 +186,18 @@
     </configuration>
     <list>
       <item itemvalue="Python tests.Unittests in Test_ex1to4.py" />
-      <item itemvalue="Python tests.Unittests for Test_ex1to4" />
       <item itemvalue="Python tests.Unittests for Test_ex1to4.TestEx1to4.test_count_digits" />
       <item itemvalue="Python tests.Unittests for Test_ex1to4.TestEx1to4.test_isPalindrome" />
       <item itemvalue="Python.Ex1to4" />
+      <item itemvalue="Python tests.Unittests for Test_ex1to4.TestEx1to4" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Unittests for Test_ex1to4.TestEx1to4.test_isPalindrome" />
         <item itemvalue="Python.Ex1to4" />
+        <item itemvalue="Python tests.Unittests for Test_ex1to4.TestEx1to4.test_isPalindrome" />
+        <item itemvalue="Python tests.Unittests for Test_ex1to4.TestEx1to4" />
         <item itemvalue="Python tests.Unittests for Test_ex1to4.TestEx1to4.test_count_digits" />
         <item itemvalue="Python tests.Unittests in Test_ex1to4.py" />
-        <item itemvalue="Python tests.Unittests for Test_ex1to4" />
       </list>
     </recent_temporary>
   </component>
@@ -211,12 +205,6 @@
     <configuration />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_for_Test_ex1_Test_ex1_test_reversing - 2018.07.09 at 16h 18m 42s.xml">
-      <configuration name="Unittests for Test_ex1.Test_ex1.test_reversing" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_Test_ex1_py - 2018.07.09 at 16h 13m 21s.xml">
-      <configuration name="Unittests in Test_ex1.py" configurationId="tests" />
-    </history-entry>
     <history-entry file="Unittests_for_Test_ex1_Test_ex1to4_test_count_digits - 2018.07.09 at 21h 43m 54s.xml">
       <configuration name="Unittests for Test_ex1.Test_ex1to4.test_count_digits" configurationId="tests" />
     </history-entry>
@@ -241,15 +229,21 @@
     <history-entry file="Unittests_for_Test_ex1to4_TestEx1to4_test_isPalindrome - 2018.07.09 at 22h 12m 40s.xml">
       <configuration name="Unittests for Test_ex1to4.TestEx1to4.test_isPalindrome" configurationId="tests" />
     </history-entry>
+    <history-entry file="Unittests_for_Test_ex1to4_TestEx1to4 - 2018.07.09 at 23h 04m 18s.xml">
+      <configuration name="Unittests for Test_ex1to4.TestEx1to4" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_Test_ex1to4_TestEx1to4_test_isPalindrome - 2018.07.09 at 23h 08m 45s.xml">
+      <configuration name="Unittests for Test_ex1to4.TestEx1to4.test_isPalindrome" configurationId="tests" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1295" height="695" extended-state="0" />
+    <frame x="-1928" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24960254" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1654373" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32934552" />
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.3291714" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.26440677" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.30736843" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3997185" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -346,13 +340,6 @@
     <entry file="file://$PROJECT_DIR$/../../DEV/Ardigen/Valuation_Service.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://C:/Python27/Lib/unittest/case.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="505" selection-start-line="505" selection-end-line="505" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Roulette.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -360,20 +347,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Ex1to4.py">
+    <entry file="file://C:/Python27/Lib/unittest/case.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-473">
-          <caret line="27" column="32" lean-forward="true" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
+        <state relative-caret-position="204">
+          <caret line="230" column="8" selection-start-line="230" selection-start-column="8" selection-end-line="230" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Test_ex1to4.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-255">
-          <caret line="17" column="36" lean-forward="true" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
+        <state relative-caret-position="-595">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
           <folding>
             <element signature="e#24#39#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Ex1to4.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="560">
+          <caret line="40" column="39" lean-forward="true" selection-start-line="40" selection-start-column="39" selection-end-line="40" selection-end-column="39" />
         </state>
       </provider>
     </entry>
