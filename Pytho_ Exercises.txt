@@ -1,0 +1,48 @@
+Python Exercises
+================
+
+1.	Reverse the order of words in a sentence. I.e.: “She sells sea shells” -> “shells sea sells She”. Both input and output should be strings.
+
+2.	Translate input text string to string of numbers on feature-phone keyboard basis. I.e. “a” is one press of button 2, “b” - two presses of 2, etc. “Eve has a cat”-> 3388833#4427777#2#22228. (One can use # as a space). Translation should be case insensitive.
+
+3.	Check how many different digits are in given number. I.e.: 177 - > 2.
+
+4.	Palindrome. Write a program which tells if a word or a sentence is a palindrome. I.e. “A toyota”, “11 02 2011”, “Anna”. Ignore spaces or letter case.
+
+5.	Roulette. Number of players,  number of games and game mode are passed to program via command line (I.e.: python roulette.py 6 2 1). At the beginning program asks about names of the players and the numbers they bet. Next depending on game mode following actions are executed: Mode 1: Program executes all games and finally print  summary in form (example): 
+
+TOTAL NUMBER OF PLAYERS: 1
+TOTAL NUMBER OF GAMES: 5
+
+RESULTS
+GAME	WIN NUMBER
+1		24
+2		3
+3		1
+4		1
+5		24
+	
+PLAYER	BET		WIN		LOSE
+John		3, 17, 24	1, 2, 5		3, 4
+
+Mode 2: Each player bets numbers, program selects some number and writes who has chosen right. Betting and number generating are repeated as many times as number of games. After all games, program prints some summary (see below), and terminates. BET NUMBERS field stores all numbres bet by the players in the stated game.
+
+Use object-oriented approach.
+
+TOTAL NUMBER OF PLAYERS: 2
+TOTAL NUMBER OF GAMES: 3
+
+GAME NUMBER: 1
+BET NUMBERS:  2, 5, 7, 24
+WIN NUMBER: 4
+WINNERS:  None
+
+GAME NUMBER: 2
+BET NUMBERS:  2, 5, 14, 7, 24
+WIN NUMBER: 14
+WINNERS:  Anna, John
+
+GAME NUMBER: 1
+BET NUMBERS:  2, 5 ,7 ,24 ,31
+WIN NUMBER:  31
+WINNERS:  John
