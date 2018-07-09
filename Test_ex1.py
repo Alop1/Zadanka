@@ -4,14 +4,14 @@ from Ex1 import *
 
 
 class Test_ex1(unittest.TestCase):
-    def test_reversing(self):
+    def reverse_sentence(self):
         text = "ala ma kota"
-        self.assertEquals(reversing(text), "kota ma ala")
+        self.assertEquals(reverse_sentence(text), "kota ma ala")
         text = "żołte żąkile"
-        self.assertEquals(reversing(text), "żąkile żołte")
+        self.assertEquals(reverse_sentence(text), "żąkile żołte")
         text = "a"
-        self.assertEquals(reversing(text), "a")
+        self.assertEquals(reverse_sentence(text), "a")
         text = " "
-        self.assertEquals(reversing(text), "")
+        self.assertEquals(reverse_sentence(text), "")
         text = "this is Kate's balloon"
-        self.assertEquals(reversing(text), "balloon Kate's is this")
+        self.assertEquals(reverse_sentence(text), "balloon Kate's is this")
