@@ -47,7 +47,7 @@ class TestEx1to4(unittest.TestCase):
 
     def test_convert_to_phone_keyboard_style(self):
         string1 = "eve has a cat"
-        self.assertEquals(convert_to_phone_keyboard_style(string1),"3388833#4427777#2#22228")
+        self.assertEquals(convert_to_phone_keyboard_style(string1), "3388833#4427777#2#22228")
         pass
 
 
