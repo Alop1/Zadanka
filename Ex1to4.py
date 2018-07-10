@@ -16,10 +16,8 @@ def convert_to_phone_keyboard_style(sentence):
     phone_style_sentence = ""
     for char in sentence:
         selected_pair_number_letters = [(key, letter_to_number_map[key]) for key in letter_to_number_map.keys() if char in key]         # select desire pair number amd letter set eg. 'abc' => 2
-        selected_pair_number_letters = selected_pair_number_letters[0]
-        letter_in_phone_style = [(index,letter) for index, letter in enumerate(selected_pair_number_letters[0]) if letter == char]      # get correct index in letters set eg. b = 2, s = 4
-        letter_in_phone_style = letter_in_phone_style[0]
-        phone_style_sentence += (letter_in_phone_style[0] + 1) * str(selected_pair_number_letters[1])                                   # update update sentence for new letter in phone keyboard style
+        letter_in_phone_style = [(index,letter) for index, letter in enumerate(selected_pair_number_letters[0][0]) if letter == char]      # get correct index in letters set eg. b = 2, s = 4
+        phone_style_sentence += (letter_in_phone_style[0][0] + 1) * str(selected_pair_number_letters[0][1])                                   # update update sentence for new letter in phone keyboard style
     return phone_style_sentence
 
 
