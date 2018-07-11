@@ -24,53 +24,58 @@ class Game():
         print "---**Let's start the game. Good luck everyone!**--"
         self.game_number = game_number
         self.mode = mode
-        self.winner_numbers = []
+        self.drown_numbers = []
         self.players = players
         if self.mode == 1:
             self.follow_mode1_path()
             stats = StatsMaker(self, players)
         elif self.mode == 2:
+            self.stats2 = StatsMaker(self, players)
             self.follow_mode2_path()
+
+            # stats2 = StatsMaker(self, players)
 
                         # todo po kazdym przejsciu gry statystyki dla
 
     def follow_mode1_path(self):
-        self.set_winner_number_model1()
-        self.set_betted_number_model1()
+        self.set_drown_numbers_model1()
+        self.choose_players_number_model1()
         # todo staystyki z caalej gry
-        print "zwycieskie liczby to ", self.winner_numbers
+        print "wylosowane liczby to ", self.drown_numbers
 
-    def set_betted_number_model1(self):
+    def choose_players_number_model1(self):
         for player in self.players:
             player.set_bet_number(self.mode, self.game_number)
-            player.winner_numbers_in_game(self.winner_numbers)
+            player.winner_numbers_in_game(self.drown_numbers)
 
-
-    def set_winner_number_model1(self):
-        self.winner_numbers = random.sample(xrange(1, 10), self.game_number)
+    def set_drown_numbers_model1(self):
+        self.drown_numbers = [random.randint(1, 10) for x in xrange(self.game_number)]
 
     def follow_mode2_path(self):
         i = 1
         for game in xrange(self.game_number):
             print "ROUND ", i
-            self.update_winner_number_model2()
-            self.set_betted_number_model2()
-            print "winner numer : ", self.winner_numbers[i - 1]
+            self.set_drown_number_model2()
+            self.choose_players_numbers_model2()
+            print "winner numer : ", self.drown_numbers[i - 1]
+            print self.drown_numbers
+            self.stats2.show_stats_per_round(i)
             i += 1
 
-    def set_betted_number_model2(self):
+    def choose_players_numbers_model2(self):
         for player in self.players:
             player.set_bet_number(self.mode)
-            print "player "+ player.name +" bet "+ str(player.bet_number[0])
+            print "player "+ player.name +" bet "+ str(player.bet_numbers[0])
+            player.winner_numbers_in_game(self.drown_numbers)
 
-    def update_winner_number_model2(self):
-        self.winner_numbers.append(random.sample(xrange(1, 100), 1)[0])
+    def set_drown_number_model2(self):
+        self.drown_numbers.append(random.randint(1, 100))
 
 
 class Player():
     def __init__(self):
         self.name = raw_input("What is your name? ")
-        self.bet_numbers = ''     #mozna stworzyc @property
+        self.bet_numbers = []     #mozna stworzyc @property
         self.winner_number_per_game = []
         self.lose_numer_per_game = []
 
@@ -80,17 +85,17 @@ class Player():
             self.bet_numbers = self.bet_numbers.split(",")
             print self.bet_numbers
         elif mode == 2:         #inster one number
-            self.bet_numbers = raw_input(self.name + ", please type your bet number: ")
-            self.bet_numbers = list(self.bet_numbers)
+            new_number = int(raw_input(self.name + ", please type your bet number: "))
+            self.bet_numbers.append(new_number)
+            print self.bet_numbers
 
-    def winner_numbers_in_game(self, winner_numbers):
-        for number in self.bet_numbers:
-            if number in winner_numbers:
-                self.winner_number_per_game.append(number)
-            else:
-                self.lose_numer_per_game.append(number)
-
-
+    def winner_numbers_in_game(self, drown_numbers, mode=2):
+        if mode == 2:
+            for i in xrange(len(self.bet_numbers)):
+                if int(self.bet_numbers[i]) == drown_numbers[i]:
+                    self.winner_number_per_game.append(self.bet_numbers[i])
+                else:
+                    self.lose_numer_per_game.append(self.bet_numbers[i])
 
 
 
@@ -99,35 +104,46 @@ class StatsMaker():
     def __init__(self, game, players):
         self.game = game
         self.players = players
-        self.show_general_stats()
-        self.show_player_stats()
+        self.show_scope()
+        if game.mode == 1:
+            self.show_general_stats()
+            self.show_player_stats()
 
+
+
+    def show_scope(self):
+        print "TOTAL NUMBER OF PLAYERS: ", len(self.players)
+        print "TOTAL NUMBER OF GAMES: ", self.game.game_number
 
     def show_general_stats(self):
         if self.game.mode == 1:
             print "GAME\t WIN NUMER"
             i = 1
-            for winner_number in self.game.winner_numbers:
+            for winner_number in self.game.drown_numbers:
                 print i, "\t\t", winner_number
                 i += 1
     def show_player_stats(self):
         print "PLAYER \t BET \t WIN \t LOSE"
         for player in self.players:
             print player.name + " \t\t\t" + str(player.winner_number_per_game) +"\t" + str(player.lose_numer_per_game)
-
-
-            pass
     # todo  dwie rozne staystyki dl agraca i playera
+
+    
+    def show_stats_per_round(self, round_no):
+        for player in self.players:
+            print player.name, "obstawil ", player.bet_numbers[round_no-1]
+        print "WYLOSOWANO ", self.game.drown_numbers[round_no-1]
 
 
 
 
 def main(argv):
     print argv
-    #create player
+    #create player()
     player1 = Player()
-    game_mode1 = Game(5, 1, [player1])
-    # game_mode2 = Game(5, 2, [player1])
+    player2 = Player()
+    # game_mode1 = Game(5, 1, [player1, player2])
+    game_mode2 = Game(5, 2, [player1])
     # stats = StatsMaker(game_mode2, [player1])
 
     #start game
