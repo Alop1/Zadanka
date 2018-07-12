@@ -30,7 +30,7 @@ class GameMode1(Game):
     def start_game(self):
         self.set_drown_numbers()
         self.drawn_players_numbers()
-        print "wylosowane liczby to ", self.drown_numbers
+        # print "wylosowane liczby to ", self.drown_numbers
 
     def drawn_players_numbers(self):
         for player in self.players:
