@@ -23,9 +23,9 @@ class GameMode1(Game):
         self.mode = 1
         self.drown_numbers = []
         self.players = players
-
-        self.start_game()
-        stats = StatsMaker(self, players)
+        self.stats = StatsMaker(self, players)
+        # self.stats.show_scope()
+        # self.stats.show_player_stats()
 
     def start_game(self):
         self.set_drown_numbers()
@@ -49,11 +49,7 @@ class GameMode2(Game):
         self.drown_numbers = []
         self.players = players
 
-        self.start_game()
         self.stats2 = StatsMaker(self, players)
-        self.stats2.show_scope()
-        self.stats2.show_stats_per_round()
-        self.stats2.show_player_stats()
 
     def start_game(self):
         for game in xrange(self.game_number):
@@ -67,7 +63,7 @@ class GameMode2(Game):
             player.set_bet_number(self.mode)
 
     def set_drown_numbers(self):
-        self.drown_numbers.append(random.randint(1, 100))
+        self.drown_numbers.append(random.randint(1, 10))
 
 
 class Player(object):
@@ -101,10 +97,8 @@ class StatsMaker():
     def __init__(self, game, players):
         self.game = game
         self.players = players
-        if game.mode == 1:
-            self.show_scope()
-            self.show_general_stats()
-            self.show_player_stats()
+
+
 
     def show_scope(self):
         print "\nTOTAL NUMBER OF PLAYERS: ", len(self.players)
@@ -121,20 +115,21 @@ class StatsMaker():
     def show_player_stats(self):
         print "\nPLAYER \t BET \t WIN \t LOSE"
         for player in self.players:
-            print player.name + " \t\t\t" + str(player.winner_number_per_game) +"\t" + str(player.lose_numer_per_game)
+            print player.name + " \t\t\t" + str(player.lucky_numbers_per_game) + "\t" + str(player.lose_numbers_per_game)
 
     def show_stats_per_round(self):
         for round_no in xrange(self.game.game_number):
             bet_number = []
             winners = []
             for player in self.players:
-                bet_number.append(player.bet_numbers[round_no-1])
-                if player.bet_numbers[round_no-1] == self.game.drown_numbers[round_no-1]:
+                bet_number.append(player.bet_numbers[round_no])
+                if player.bet_numbers[round_no] == self.game.drown_numbers[round_no]:
                     winners.append(player.name)
-            print "\nGAME NUMBER:", round_no
+            print "\nGAME NUMBER:", round_no + 1
             print "BET NUMBERS: ", bet_number
-            print "WIN NUMBER:  ",  self.game.drown_numbers[round_no-1]
-            print "WINNERS: ", winners
+            print "WIN NUMBER:  ",  self.game.drown_numbers[round_no]
+            displayed_winners = winners if winners else "None"
+            print "WINNERS: ", displayed_winners
 
 
 
@@ -144,11 +139,19 @@ def main(argv):
     #create player()
     player1 = Player()
     player2 = Player()
-    # game_mode1 = GameMode1(5, [player1, player2])
-    game_mode2 = GameMode2(5, [player1, player2])
-    # stats = StatsMaker(game_mode2, [player1])
 
-    #start game
+    # game_mode1 = GameMode1(5, [player1, player2])
+    # game_mode1.start_game()
+    # game_mode1.stats.show_scope()
+    # game_mode1.stats.show_general_stats()
+    # game_mode1.stats.show_player_stats()
+
+    game_mode2 = GameMode2(5, [player1, player2])
+    game_mode2.start_game()
+    game_mode2.stats2.show_scope()
+    game_mode2.stats2.show_stats_per_round()
+    game_mode2.stats2.show_player_stats()
+
 
 
 
